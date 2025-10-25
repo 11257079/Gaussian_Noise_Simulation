@@ -77,4 +77,4 @@ demonstrating how independent noise sources combine in real-world navigation sys
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/Gaussian_Distribution_Navigation.git
+   git clone https://github.com/11257079/Gaussian_Noise_Simulation.git
