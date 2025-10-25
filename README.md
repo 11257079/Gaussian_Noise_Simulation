@@ -7,34 +7,28 @@ It connects a simple probability concept with real-world **sensor fusion** and *
 
 ## 🎯 1. What Each Color Means
 
-**Red (x):** random variable \( x \sim \mathcal{N}(0, 2^2) \)  
-→ mean \( \mu_x = 0 \), standard deviation \( \sigma_x = 2 \)
+**Red (x):** random variable x ~ N(0, 2²)  
+→ mean μx = 0, standard deviation σx = 2
 
-**Green (y):** random variable \( y \sim \mathcal{N}(0, 3^2) \)  
-→ mean \( \mu_y = 0 \), standard deviation \( \sigma_y = 3 \)
+**Green (y):** random variable y ~ N(0, 3²)  
+→ mean μy = 0, standard deviation σy = 3
 
-**Yellow (z = x − y):** represents the **difference between two independent Gaussian variables**
+**Yellow (z = x − y):** represents the difference between two independent Gaussian variables.
 
 ---
 
-## 📘 2. Theoretical Properties of \( z = x - y \)
+## 📘 2. Theoretical Properties of z = x - y
 
-If \( x \) and \( y \) are independent and Gaussian:
+If x and y are independent and Gaussian:
 
-\[
-z = x - y \sim \mathcal{N}(\mu_x - \mu_y, \sigma_x^2 + \sigma_y^2)
-\]
+z = x - y ~ N(μx - μy, σx² + σy²)
 
 Plugging in your values:
 
-\[
-\mu_z = 0 - 0 = 0
-\]
-\[
-\sigma_z = \sqrt{2^2 + 3^2} = \sqrt{13} \approx 3.606
-\]
+μz = 0 - 0 = 0  
+σz = sqrt(2² + 3²) = sqrt(13) ≈ 3.606
 
-So, **z is also Gaussian**, but **wider (more spread out)** than both x and y.
+So, z is also Gaussian, but wider (more spread out) than both x and y.
 
 ---
 
@@ -46,14 +40,12 @@ In navigation (GPS/INS, radar, star sensor fusion, etc.):
 - When two uncertain quantities are **combined or subtracted**, their variances **add up**.  
 - This is exactly how **Kalman filters** update uncertainty:
 
-\[
-P_{\text{combined}} = P_1 + P_2
-\]
+P_combined = P₁ + P₂
 
 **Example:**  
 - GPS position error: σ = 3 m  
 - IMU drift error: σ = 5 m  
-→ Combined uncertainty: \( \sqrt{3^2 + 5^2} = 5.83 m \)
+→ Combined uncertainty: sqrt(3² + 5²) = 5.83 m
 
 The same principle is shown in this simulation — combining random processes leads to **larger uncertainty** (wider Gaussian).
 
@@ -63,9 +55,9 @@ The same principle is shown in this simulation — combining random processes le
 
 ![Gaussian Distributions](gaussian_distribution.png)
 
-- **Red:** \( x \sim N(0, 2^2) \) → narrow  
-- **Green:** \( y \sim N(0, 3^2) \) → wider  
-- **Yellow:** \( z = x - y \) → widest (uncertainty grows)
+- **Red:** x ~ N(0, 2²) → narrow  
+- **Green:** y ~ N(0, 3²) → wider  
+- **Yellow:** z = x - y → widest (uncertainty grows)
 
 ---
 
