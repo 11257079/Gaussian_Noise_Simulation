@@ -51,15 +51,26 @@ The same principle is shown in this simulation — combining random processes le
 
 ---
 
-## 📈 4. Result Visualization
+---
 
-![Gaussian Distributions](gaussian_distribution.png)
+## 📊 Simulation Results
 
-- **Red:** x ~ N(0, 2²) → narrow  
-- **Green:** y ~ N(0, 3²) → wider  
-- **Yellow:** z = x - y → widest (uncertainty grows)
+The first figure shows 10,000 random samples of x, y, and z = x − y.  
+Each signal represents Gaussian noise with different variances.  
+- **Red:** x ~ N(0, 2²)  
+- **Green:** y ~ N(0, 3²)  
+- **Yellow:** z = x − y  
+
+![Gaussian Signals](gaussian_signals_plot.png)
+
+The second figure shows their normalized histograms (approximated probability density functions).  
+It clearly illustrates that z = x − y has a wider spread (larger variance) than x or y —  
+demonstrating how independent noise sources combine in real-world navigation systems.
+
+![Gaussian Distribution](gaussian_distribution.png)
 
 ---
+
 
 ## 💻 5. Run the Code
 
